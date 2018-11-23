@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "cfc-http": [
+        "dist/cfc-http"
+      ],
+      "cfc-http/*": [
+        "dist/cfc-http/*"
+      ]
+    }
   }
 }

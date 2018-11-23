@@ -133,6 +133,41 @@
           }
         }
       }
+    },
+    "cfc-http": {
+      "root": "projects/cfc-http",
+      "sourceRoot": "projects/cfc-http/src",
+      "projectType": "library",
+      "prefix": "enl",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/cfc-http/tsconfig.lib.json",
+            "project": "projects/cfc-http/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cfc-http/src/test.ts",
+            "tsConfig": "projects/cfc-http/tsconfig.spec.json",
+            "karmaConfig": "projects/cfc-http/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cfc-http/tsconfig.lib.json",
+              "projects/cfc-http/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "cfc-http-app"
